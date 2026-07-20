@@ -33,7 +33,12 @@ body {
   gap: 8px;
 }
 
-.logo-icon { font-size: 18px; }
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  flex-shrink: 0;
+}
 .logo-text {
   font-size: 15px;
   font-weight: 700;

@@ -1,27 +1,41 @@
 {
-  "manifest_version": 3,
-  "name": "FB AutoReply AI",
-  "version": "1.0",
-  "description": "Auto-replies to Facebook messages using Groq AI (LLaMA). Reads incoming messages and sends AI-generated replies on your behalf.",
-  "permissions": [
-    "storage"
-  ],
-  "host_permissions": [
-    "https://www.facebook.com/*",
-    "https://api.groq.com/*"
-  ],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://www.facebook.com/messages/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
+    "manifest_version": 3,
+    "name": "FB AutoReply AI",
+    "version": "1.0",
+    "description": "Auto-replies to Facebook messages using Groq AI (LLaMA). Reads incoming messages and sends AI-generated replies on your behalf.",
+    "permissions": ["storage"],
+    "host_permissions": [
+        "https://www.facebook.com/*",
+        "https://api.groq.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "assets/icon-16.png",
+        "32": "assets/icon-32.png",
+        "48": "assets/icon-48.png",
+        "128": "assets/icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.facebook.com/messages/*",
+                "https://www.facebook.com/messages/e2ee/*",
+                "https://www.messenger.com/*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "FB AutoReply AI",
+        "default_icon": {
+            "16": "assets/icon-16.png",
+            "32": "assets/icon-32.png",
+            "48": "assets/icon-48.png",
+            "128": "assets/icon-128.png"
+        }
     }
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "FB AutoReply AI"
-  }
 }
