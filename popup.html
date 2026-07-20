@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FB AutoReply AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="logo">
+        <span class="logo-icon">🤖</span>
+        <span class="logo-text">FB AutoReply AI</span>
+      </div>
+      <div class="toggle-group">
+        <span class="status-badge" id="status-badge">OFF</span>
+        <label class="toggle">
+          <input type="checkbox" id="enabled-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="field">
+      <label for="api-key">Groq API Key</label>
+      <div class="input-row">
+        <input type="password" id="api-key" placeholder="gsk_xxxxxxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+        <button class="peek-btn" id="peek-btn" title="Show/hide key">👁</button>
+      </div>
+      <a class="field-hint link" href="https://console.groq.com/keys" target="_blank">
+        Get your free key at console.groq.com →
+      </a>
+    </div>
+
+    <div class="field">
+      <label for="system-prompt">System Prompt</label>
+      <textarea id="system-prompt" rows="5" placeholder="Tell the AI how to reply on your behalf..."></textarea>
+      <p class="field-hint">This is the instruction the AI follows when generating replies.</p>
+    </div>
+
+    <div class="field">
+      <label for="delay">
+        Response delay
+        <span class="label-suffix" id="delay-display">3s</span>
+      </label>
+      <input type="range" id="delay" min="1" max="20" value="3" step="1">
+      <p class="field-hint">A delay makes replies feel more natural. Recommended: 3–8 seconds.</p>
+    </div>
+
+    <button class="save-btn" id="save-btn">Save Settings</button>
+
+    <div class="status-msg" id="status-msg"></div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      <p>Open a <strong>specific Facebook conversation</strong> before enabling the bot.</p>
+      <p>Check the browser console for <code>[FB AutoReply]</code> logs.</p>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
