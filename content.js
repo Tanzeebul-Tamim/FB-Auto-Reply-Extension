@@ -3,18 +3,15 @@
 // This script watches for new incoming messages, generates a reply via Groq,
 // types it into the input, and sends it.
 
+import { DEFAULT_PROMPT } from "./popup";
+
 // =====================================================================
 // STATE
 // =====================================================================
 
 let settings = {
     apiKey: "",
-    systemPrompt: `You are replying to Facebook messages on behalf of the user.
-Keep responses natural, short, and conversational — 1 to 3 sentences unless the topic needs more.
-Match the tone of the message: casual if they're casual, more thoughtful if they're serious.
-Respond in the same language they write in.
-Never reveal you are an AI or a bot.
-If you're unsure what to say, ask a simple follow-up question.`,
+    systemPrompt: DEFAULT_PROMPT,
     enabled: false,
     delay: 3,
 };

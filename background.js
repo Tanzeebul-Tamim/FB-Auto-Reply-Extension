@@ -23,7 +23,7 @@ async function callGroqAPI({ apiKey, systemPrompt, messages }) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                model: "openai/gpt-oss-120b", // Fast, free, great for chat
+                model: "llama-3.1-8b-instant", // Fast, free, great for chat
                 max_tokens: 512,
                 temperature: 0.75,
                 messages: [
