@@ -26,6 +26,8 @@
   </a>
 </p>
 
+> **Note:** The demo GIF was recorded before the latest icon redesign. Functionality remains the same.
+
 <p align="center">
   <img src="assets/demo.gif" alt="FB AutoReply AI flow: Messenger to Groq to automatic reply">
 </p>
