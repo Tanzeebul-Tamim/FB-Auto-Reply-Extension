@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "FB AutoReply AI",
     "version": "1.0",
-    "description": "Auto-replies to Facebook messages using Groq AI (LLaMA). Reads incoming messages and sends AI-generated replies on your behalf.",
+    "description": "Auto-replies to Facebook messages using AI. Reads incoming messages and sends AI-generated replies on your behalf.",
     "permissions": ["storage"],
     "host_permissions": [
         "https://www.facebook.com/*",

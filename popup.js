@@ -13,7 +13,7 @@ const el = {
   statusMsg:    document.getElementById('status-msg')
 };
 
-export const DEFAULT_PROMPT = `You are replying to Facebook messages on behalf of the user.
+const DEFAULT_PROMPT = `You are replying to Facebook messages on behalf of the user.
 Keep responses natural, short, and conversational — 1 to 3 sentences unless the topic needs more.
 Match the tone of the message: casual if they're casual, more thoughtful if they're serious.
 Respond in the same language they write in.
